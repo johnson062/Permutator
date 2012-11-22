@@ -5,10 +5,11 @@
    by users, and it will avoid generating duplicated charaters. 
  */
 //Library Inclusion
-#include "genlib.h"
+
 #include <iostream>
 #include "simpio.h"
 #include <string>
+using namespace std;
 
 //Function Prototype
 void RecursivePermute(string prefix, string rest, string checkPrefix);
@@ -17,7 +18,8 @@ void ListPermutations(string str);
 //Main
 int main() {
 	cout << "Please enter a string.\n";
-	string inputString = GetLine();
+	string inputString;
+	getline(cin, inputString);
 	cout << endl;
 	ListPermutations(inputString);
 
